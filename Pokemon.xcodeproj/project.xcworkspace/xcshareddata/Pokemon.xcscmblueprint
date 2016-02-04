@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0AB9EF18E603B972D230C52EA1A9829C00976B0E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "954482B83F1459C33C555D9EEEF0BF5AD82A8602" : 0,
+    "0AB9EF18E603B972D230C52EA1A9829C00976B0E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F6EDE922-F72D-41E3-A70B-28EDEBE220E1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "954482B83F1459C33C555D9EEEF0BF5AD82A8602" : "..",
+    "0AB9EF18E603B972D230C52EA1A9829C00976B0E" : "ios-pokemon-game\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Pokemon",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Pokemon.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:IsaacLessard\/ios-pokemon-game.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0AB9EF18E603B972D230C52EA1A9829C00976B0E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:IsaacLessard\/g15_classwork.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "954482B83F1459C33C555D9EEEF0BF5AD82A8602"
+    }
+  ]
+}
