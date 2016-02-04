@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c9d-Ge-Xnw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c9d-Ge-Xnw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,13 +25,6 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4C-G4-IxH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-aS-Gaz">
-                                <rect key="frame" x="268" y="102" width="64" height="64"/>
-                                <state key="normal" image="pichu.png"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wl8-bD-bfn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyi-Ap-OGf">
                                 <rect key="frame" x="268" y="191" width="64" height="64"/>
                                 <state key="normal" image="pikachu.png"/>
@@ -37,22 +32,52 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xg6-NF-ric"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EN-4U-rdw">
+                                <rect key="frame" x="279" y="524" width="53" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9Q-SB-zHB">
+                                <rect key="frame" x="268" y="380" width="64" height="64"/>
+                                <state key="normal" title="Button4" image="charizard.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXL-Pg-1Rb">
+                                <rect key="frame" x="268" y="473" width="64" height="64"/>
+                                <state key="normal" title="Button5" image="charmander.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-aS-Gaz">
+                                <rect key="frame" x="268" y="102" width="64" height="64"/>
+                                <state key="normal" image="pichu.png"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wl8-bD-bfn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="b9Q-SB-zHB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="248" id="1fE-oY-pz0"/>
                             <constraint firstItem="lyi-Ap-OGf" firstAttribute="top" secondItem="BZa-aS-Gaz" secondAttribute="bottom" constant="25" id="2nC-uW-7D7"/>
                             <constraint firstItem="4G9-wW-yPi" firstAttribute="centerX" secondItem="lyi-Ap-OGf" secondAttribute="centerX" id="6dS-FQ-S5D"/>
                             <constraint firstItem="BZa-aS-Gaz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qpe-fT-Xqo"/>
                             <constraint firstItem="lyi-Ap-OGf" firstAttribute="centerX" secondItem="BZa-aS-Gaz" secondAttribute="centerX" id="R9W-ZI-Ylh"/>
                             <constraint firstItem="BZa-aS-Gaz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="TZW-KY-xG0"/>
+                            <constraint firstItem="b9Q-SB-zHB" firstAttribute="top" secondItem="4G9-wW-yPi" secondAttribute="bottom" constant="40" id="Ujm-W2-4DS"/>
+                            <constraint firstItem="mXL-Pg-1Rb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="248" id="fWF-pr-1R3"/>
+                            <constraint firstAttribute="centerXWithinMargins" secondItem="b9Q-SB-zHB" secondAttribute="trailing" constant="248" id="hDP-dE-tFI"/>
                             <constraint firstItem="4G9-wW-yPi" firstAttribute="top" secondItem="lyi-Ap-OGf" secondAttribute="bottom" constant="26" id="kW8-u6-GFU"/>
+                            <constraint firstItem="mXL-Pg-1Rb" firstAttribute="top" secondItem="b9Q-SB-zHB" secondAttribute="bottom" constant="34" id="mRY-qN-t3N"/>
+                            <constraint firstAttribute="centerXWithinMargins" secondItem="mXL-Pg-1Rb" secondAttribute="trailing" constant="248" id="vDB-IB-qBc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ymV-op-aoh"/>
                     <connections>
+                        <outlet property="ScoreLabel" destination="4EN-4U-rdw" id="B7Q-bw-4AN"/>
                         <outlet property="button1" destination="BZa-aS-Gaz" id="aJL-xB-F5q"/>
                         <outlet property="button2" destination="lyi-Ap-OGf" id="cHX-Ow-JJW"/>
                         <outlet property="button3" destination="4G9-wW-yPi" id="c7V-Cd-DF3"/>
+                        <outlet property="button4" destination="b9Q-SB-zHB" id="40S-2t-QH3"/>
+                        <outlet property="button5" destination="mXL-Pg-1Rb" id="PBT-Y4-3rQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,6 +104,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="charizard.png" width="64" height="64"/>
+        <image name="charmander.png" width="64" height="64"/>
         <image name="pichu.png" width="64" height="64"/>
         <image name="pikachu.png" width="64" height="64"/>
         <image name="raichu.png" width="64" height="64"/>
