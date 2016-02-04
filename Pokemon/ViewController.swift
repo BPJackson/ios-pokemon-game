@@ -7,10 +7,13 @@ class ViewController: UIViewController {
     var pokemonList = [String]()
     var score = 0
     var correctAnswer = 0
-
+    
+    //MARK: Properties
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet var scoreLabel: UIView!
+    @IBOutlet var scoreText: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,11 @@ class ViewController: UIViewController {
             }
         }
         askQuestion()
+        
+
+        
+        
+        
     }
 
     func askQuestion(action: UIAlertAction! = nil) {
@@ -37,6 +45,9 @@ class ViewController: UIViewController {
 
         // Assign (the now random) strings at index 1..2 to UIImage buttons.
         button1.setImage(UIImage(named: pokemonList[0]), forState: .Normal)
+        button2.setImage(UIImage(named: pokemonList[1]), forState: .Normal)
+        button3.setImage(UIImage(named: pokemonList[2]), forState: .Normal)
+
 
 
         
@@ -54,7 +65,8 @@ class ViewController: UIViewController {
             title = "Nope. Sorry."
             --score
         }
-        let ac = UIAlertController(title: title, message: "Your score is /(score).", preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
+        scoreText.text = String(score)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
     }
