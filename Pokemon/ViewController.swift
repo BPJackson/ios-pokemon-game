@@ -36,7 +36,9 @@ class ViewController: UIViewController {
         pokemonList = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(pokemonList) as! [String]
 
         // Assign (the now random) strings at index 1..2 to UIImage buttons.
-        button1.setImage(UIImage(named: pokemonList[0]), forState: .Normal)
+        button1.setImage(UIImage(named: pokemonList[1]), forState: .Normal)
+        button2.setImage(UIImage(named: pokemonList[0]), forState: .Normal)
+        button3.setImage(UIImage(named: pokemonList[3]), forState: .Normal)
 
 
         
@@ -54,7 +56,7 @@ class ViewController: UIViewController {
             title = "Nope. Sorry."
             --score
         }
-        let ac = UIAlertController(title: title, message: "Your score is /(score).", preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
     }
