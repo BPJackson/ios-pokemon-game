@@ -6,6 +6,7 @@ class ViewController: UIViewController {
 
     var pokemonList = [String]()
     var score = 0
+    @IBOutlet weak var displayscore: UILabel!
     var correctAnswer = 0
 
     @IBOutlet weak var button1: UIButton!
@@ -37,8 +38,9 @@ class ViewController: UIViewController {
 
         // Assign (the now random) strings at index 1..2 to UIImage buttons.
         button1.setImage(UIImage(named: pokemonList[0]), forState: .Normal)
-
-
+        button2.setImage(UIImage(named: pokemonList[1]), forState: .Normal)
+        button3.setImage(UIImage(named: pokemonList[2]), forState: .Normal)
+            displayscore.text = "\(score)"
         
         // Generate random number to reference the display title and correct index in pokemonList.
         correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
@@ -49,12 +51,14 @@ class ViewController: UIViewController {
         var title: String
         if sender.tag == correctAnswer {
             title = "That's correct!"
-            ++score
+            score = score + 1
+
         } else {
             title = "Nope. Sorry."
-            --score
+            score = score - 1
+
         }
-        let ac = UIAlertController(title: title, message: "Your score is /(score).", preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
     }
