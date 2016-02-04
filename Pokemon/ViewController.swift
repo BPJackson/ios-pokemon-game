@@ -49,12 +49,13 @@ class ViewController: UIViewController {
         var title: String
         if sender.tag == correctAnswer {
             title = "That's correct!"
-            ++score
+            ++score;
         } else {
             title = "Nope. Sorry."
-            --score
+            --score;
+            
         }
-        let ac = UIAlertController(title: title, message: "Your score is /(score).", preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
     }
