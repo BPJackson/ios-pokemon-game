@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Pokemon
-//
-//  Created by Aaron Gray.
-//  Do what you want with it.
-//
 
 import UIKit
 import GameplayKit
