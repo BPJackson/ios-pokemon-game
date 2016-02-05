@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class ViewController: UIViewController {
                 pokemonList.append(imageTitle)
             }
         }
+        
+
         askQuestion()
     }
 
@@ -37,8 +41,12 @@ class ViewController: UIViewController {
 
         // Assign (the now random) strings at index 1..2 to UIImage buttons.
         button1.setImage(UIImage(named: pokemonList[0]), forState: .Normal)
-
-
+        button2.setImage(UIImage(named: pokemonList[1]), forState: .Normal)
+        button3.setImage(UIImage(named: pokemonList[2]), forState: .Normal)
+        
+        // Persist Score
+        
+        scoreLabel.text = "Score: " + String(score)
         
         // Generate random number to reference the display title and correct index in pokemonList.
         correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
@@ -54,7 +62,7 @@ class ViewController: UIViewController {
             title = "Nope. Sorry."
             --score
         }
-        let ac = UIAlertController(title: title, message: "Your score is /(score).", preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is " + String(score) + ".", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
     }
