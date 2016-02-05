@@ -12,46 +12,49 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="center" semanticContentAttribute="forceLeftToRight" id="8bC-Xf-vdC">
+                    <view key="view" autoresizesSubviews="NO" contentMode="center" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4G9-wW-yPi">
-                                <rect key="frame" x="268" y="281" width="64" height="64"/>
+                                <rect key="frame" x="268" y="268" width="64" height="64"/>
                                 <state key="normal" image="raichu.png"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4C-G4-IxH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-aS-Gaz">
-                                <rect key="frame" x="268" y="102" width="64" height="64"/>
-                                <state key="normal" image="pichu.png"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wl8-bD-bfn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyi-Ap-OGf">
-                                <rect key="frame" x="268" y="191" width="64" height="64"/>
+                                <rect key="frame" x="268" y="354" width="64" height="64"/>
                                 <state key="normal" image="pikachu.png"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xg6-NF-ric"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC3-5K-ZWS">
-                                <rect key="frame" x="268" y="387" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC3-5K-ZWS">
+                                <rect key="frame" x="266" y="122" width="68" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-aS-Gaz">
+                                <rect key="frame" x="268" y="190" width="64" height="64"/>
+                                <state key="normal" image="pichu.png"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wl8-bD-bfn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lyi-Ap-OGf" firstAttribute="top" secondItem="BZa-aS-Gaz" secondAttribute="bottom" constant="25" id="2nC-uW-7D7"/>
-                            <constraint firstItem="4G9-wW-yPi" firstAttribute="centerX" secondItem="lyi-Ap-OGf" secondAttribute="centerX" id="6dS-FQ-S5D"/>
-                            <constraint firstItem="BZa-aS-Gaz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qpe-fT-Xqo"/>
-                            <constraint firstItem="lyi-Ap-OGf" firstAttribute="centerX" secondItem="BZa-aS-Gaz" secondAttribute="centerX" id="R9W-ZI-Ylh"/>
-                            <constraint firstItem="BZa-aS-Gaz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="TZW-KY-xG0"/>
-                            <constraint firstItem="4G9-wW-yPi" firstAttribute="top" secondItem="lyi-Ap-OGf" secondAttribute="bottom" constant="26" id="kW8-u6-GFU"/>
+                            <constraint firstItem="TC3-5K-ZWS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="3wb-WZ-2WC"/>
+                            <constraint firstItem="TC3-5K-ZWS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4jc-Eq-sBz"/>
+                            <constraint firstItem="BZa-aS-Gaz" firstAttribute="top" secondItem="TC3-5K-ZWS" secondAttribute="bottom" constant="47" id="7ro-wU-s7g"/>
+                            <constraint firstItem="4G9-wW-yPi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="204" id="9vV-o2-DGv"/>
+                            <constraint firstItem="4G9-wW-yPi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FNh-fQ-1Sj"/>
+                            <constraint firstItem="BZa-aS-Gaz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bq8-4M-lbg"/>
+                            <constraint firstItem="lyi-Ap-OGf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="290" id="dwe-VP-Mcw"/>
+                            <constraint firstItem="lyi-Ap-OGf" firstAttribute="centerX" secondItem="TC3-5K-ZWS" secondAttribute="centerX" id="i38-F8-ZCN"/>
+                            <constraint firstItem="lyi-Ap-OGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iTg-Qu-whY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ymV-op-aoh"/>

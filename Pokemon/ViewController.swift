@@ -2,11 +2,14 @@
 import UIKit
 import GameplayKit
 
+var lives = 3
+
 class ViewController: UIViewController {
 
     var pokemonList = [String]()
     var score = 0
     var correctAnswer = 0
+    
 
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -16,6 +19,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Collect all resources from local filesystem.
         let fm = NSFileManager.defaultManager()
@@ -31,10 +35,21 @@ class ViewController: UIViewController {
         }
         
 
-        askQuestion()
+//        if lives != 0 {
+            askQuestion()
+//        }
     }
 
     func askQuestion(action: UIAlertAction! = nil) {
+        
+        //lives remaining? 
+        if lives<=0 {
+            title = "Game Over!"
+            button1.enabled = false
+            button2.enabled = false
+            button3.enabled = false
+            return
+        }
 
         // Shuffle pokemonList so the first three indexes are truly random.
         pokemonList = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(pokemonList) as! [String]
@@ -61,8 +76,9 @@ class ViewController: UIViewController {
         } else {
             title = "Nope. Sorry."
             --score
+            --lives
         }
-        let ac = UIAlertController(title: title, message: "Your score is " + String(score) + ".", preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is " + String(score) + "." + "lives:" + String(lives), preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
     }
