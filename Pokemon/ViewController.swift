@@ -78,7 +78,7 @@ class ViewController: UIViewController {
             --score
             --lives
         }
-        let ac = UIAlertController(title: title, message: "Your score is " + String(score) + "." + "lives:" + String(lives), preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is " + String(score) + ".", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
     }
