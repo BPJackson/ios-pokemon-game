@@ -39,9 +39,9 @@ class ViewController: UIViewController {
 
         // Assign (the now random) strings at index 1..2 to UIImage buttons.
         button1.setImage(UIImage(named: pokemonList[0]), forState: .Normal)
+        button2.setImage(UIImage(named: pokemonList[1]), forState: .Normal)
+        button3.setImage(UIImage(named: pokemonList[2]), forState: .Normal)
 
-
-        
         // Generate random number to reference the display title and correct index in pokemonList.
         correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
         title = pokemonList[correctAnswer].uppercaseString
