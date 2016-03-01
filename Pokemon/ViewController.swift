@@ -11,10 +11,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var myScoreLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
+        myScoreLabel.text = "Score: \(score)"
         // Collect all resources from local filesystem.
         let fm = NSFileManager.defaultManager()
         let path = NSBundle.mainBundle().resourcePath!
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
         }
         askQuestion()
     }
-
+    
     func askQuestion(action: UIAlertAction! = nil) {
 
         // Shuffle pokemonList so the first three indexes are truly random.
@@ -54,9 +56,10 @@ class ViewController: UIViewController {
             title = "Nope. Sorry."
             --score
         }
-        let ac = UIAlertController(title: title, message: "Your score is /(score).", preferredStyle: .Alert)
+        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
+        myScoreLabel.text = "Score: \(score)"
     }
 
     override func didReceiveMemoryWarning() {
